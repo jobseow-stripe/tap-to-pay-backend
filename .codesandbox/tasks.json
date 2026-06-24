@@ -7,7 +7,7 @@
       "name": "Start Server",
       "command": "ruby server.rb",
       "runAtStart": true,
-      "preview": { "port": 4242 }
+      "preview": { "port": 4242, "openAtStart": true }
     }
   }
 }
