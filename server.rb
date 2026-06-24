@@ -16,8 +16,10 @@ get '/' do
   redirect '/index.html'
 end
 
-def create_location
-  $client.v1.terminal.locations.create({
+post '/create_location' do
+  content_type 'application/json'
+
+  location = $client.v1.terminal.locations.create({
     display_name: 'HQ',
     address: {
       line1: '1272 Valencia Street',
@@ -27,6 +29,8 @@ def create_location
       postal_code: '94110',
     }
   })
+
+  {location: location.id}.to_json
 end
 
 
