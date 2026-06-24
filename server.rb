@@ -9,7 +9,7 @@ set :public_folder, -> { File.join(root, 'public') }
 set :static, true
 set :port, 4242
 set :bind, '0.0.0.0'
-set :protection, except: [:http_origin]
+set :protection, false
 
 get '/' do
   redirect '/index.html'
