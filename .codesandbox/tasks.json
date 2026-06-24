@@ -1,0 +1,13 @@
+{
+  "setupTasks": [
+    { "name": "Install Dependencies", "command": "bundle install" }
+  ],
+  "tasks": {
+    "dev": {
+      "name": "Start Server",
+      "command": "ruby server.rb",
+      "runAtStart": true,
+      "preview": { "port": 4242 }
+    }
+  }
+}
