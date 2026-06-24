@@ -10,6 +10,7 @@ set :static, true
 set :port, 4242
 set :bind, '0.0.0.0'
 set :protection, false
+set :host_authorization, { permitted_hosts: [".csb.app"] }
 
 get '/' do
   redirect '/index.html'
